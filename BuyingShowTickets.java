@@ -18,7 +18,7 @@ public class BuyingShowTickets {
 	static long waitingTime(int[] tickets,int p){
 		int count = 0;
 		int total = 0;
-		while(tickets[p]!= 0 ){
+		/*while(tickets[p] > 0 ){
 			if(count == tickets.length){
 				count =0;
 			}
@@ -31,6 +31,38 @@ public class BuyingShowTickets {
 			}
 			count = count+1;
 		}
+		return total;*/
+		
+		if(tickets[p]==0) {
+			return total;
+		}
+		
+		for(int i =0;i<tickets.length;i++) {
+			
+			if(i<p) {
+			if(tickets[i]<=tickets[p]) {
+				total +=tickets[i];
+			}
+			else {
+				total +=tickets[p];
+				
+			}
+		}
+			else {
+				if(tickets[i] == tickets[p]) {
+					total +=tickets[p];
+				}
+				else if(tickets[i] < tickets[p]) {
+					total +=tickets[i];
+				}
+				else {
+					total +=tickets[p]-1;
+					
+				}
+			}
+		}
+		
+		
 		return total;
 	}
 
