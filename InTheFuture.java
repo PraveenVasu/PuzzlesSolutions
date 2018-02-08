@@ -1,5 +1,5 @@
 
-public class Future {
+public class InTheFuture {
 
 	/**
 	 * @param args
