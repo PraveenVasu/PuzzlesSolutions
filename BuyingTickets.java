@@ -1,7 +1,7 @@
 
 
 
-public class BuyingTickets {
+public class BuyingShowTickets {
 
 	/**
 	 * @param args
