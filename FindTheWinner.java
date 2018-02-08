@@ -24,7 +24,7 @@ public class FindTheWinner {
 			m = m+(maria[i]-andrea[i]);
 			}
 			}else{
-				if(i%3 ==0){	
+				if(i%2 != 0){	
 					a = a +(andrea[i]-maria[i]);
 					m = m+(maria[i]-andrea[i]);
 					}
