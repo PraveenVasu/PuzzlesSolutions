@@ -16,25 +16,22 @@ public class BuyingShowTickets {
 	}
 	
 	static long waitingTime(int[] tickets,int p){
-		
 		int count = 0;
 		int total = 0;
-		int negCount = 0;
-		while(tickets[p] !=0){
+		while(tickets[p]!= 0 ){
 			if(count == tickets.length){
 				count =0;
 			}
-			tickets[count] = tickets[count]-1;
-			if(tickets[count] <0){
-				negCount = negCount+1;
+			if(tickets[count] != 0 ) {
+				tickets[count]--;
+				total = total+1;
+			};
+			if(tickets[p] == 0) {
+				break;
 			}
 			count = count+1;
-			total = total+1;
-			
-			
 		}
-		
-		return total-negCount;
+		return total;
 	}
 
 }
