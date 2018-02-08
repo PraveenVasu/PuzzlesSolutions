@@ -16,54 +16,34 @@ public class BuyingShowTickets {
 	}
 	
 	static long waitingTime(int[] tickets,int p){
-		int count = 0;
-		int total = 0;
-		/*while(tickets[p] > 0 ){
-			if(count == tickets.length){
-				count =0;
-			}
-			if(tickets[count] != 0 ) {
-				tickets[count]--;
-				total = total+1;
-			};
-			if(tickets[p] == 0) {
-				break;
-			}
-			count = count+1;
-		}
-		return total;*/
-		
+		int totalWait = 0;		
 		if(tickets[p]==0) {
-			return total;
+			return totalWait;
 		}
-		
 		for(int i =0;i<tickets.length;i++) {
 			
 			if(i<p) {
-			if(tickets[i]<=tickets[p]) {
-				total +=tickets[i];
+				if(tickets[i]<=tickets[p]) {
+					totalWait =totalWait + tickets[i];
+				}
+			else {
+				totalWait =totalWait+tickets[p];			
+				}
+		    }
+			else if(i == p){
+				totalWait = totalWait + tickets[p];
 			}
 			else {
-				total +=tickets[p];
+				if(tickets[i] >= tickets[p]) {
+					totalWait =totalWait+tickets[p]-1;
+				}
+				else{
+					totalWait =totalWait+tickets[i];
+				}
 				
 			}
-		}
-			else {
-				if(tickets[i] == tickets[p]) {
-					total +=tickets[p];
-				}
-				else if(tickets[i] < tickets[p]) {
-					total +=tickets[i];
-				}
-				else {
-					total +=tickets[p]-1;
-					
-				}
-			}
-		}
-		
-		
-		return total;
+		}	
+		return totalWait;
 	}
 
 }
