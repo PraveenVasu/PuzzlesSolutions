@@ -14,24 +14,22 @@ public class ConsecutiveSum {
 	
 	static int consecutive(long sum){
 		int count = 0;
-		long totalSum = (sum/2)+1;
-		for(int i =1;i<totalSum;i++){
+		int count = 0;
+		long totalSum = (sum/2) + 1;
+		for(int i =1;i<=totalSum;i++){
 			int total = i;
-			for(int j=i+1;j<totalSum;j++){
-				
+			for(int j=i+1;j<=totalSum;j++){
+			
 				total = total+j;
-		
+	
 				if(total == sum){
 					count = count+1;
 					break;
 				}
-				if(total>sum){
+				if(total > sum){
 				   break;
 				}
 			}
-			if(total>sum){
-				   break;
-				}
 		}
 		
 		return count;
