@@ -14,7 +14,7 @@ public class BalancedOrNot {
 	 System.out.println(Arrays.toString(result));
 	}	
 	static int[] balancedOrNot(String[] expressions,int[] maxReplacements){
-		int[] result = new int[2];
+		int[] result = new int[maxReplacements.length];
 	    for(int i=0;i<expressions.length;i++){
 	        int count = 0;
 	        int totalCount = 0;
