@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 
-public class Psychometric {
+public class PsychometricTesting {
 
 	/**
 	 * @param args
