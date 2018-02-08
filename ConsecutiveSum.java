@@ -13,7 +13,7 @@ public class ConsecutiveSum {
 	}
 	
 	static int consecutive(long sum){
-		int count = 0;
+		
 		int count = 0;
 		long totalSum = (sum/2) + 1;
 		for(int i =1;i<=totalSum;i++){
