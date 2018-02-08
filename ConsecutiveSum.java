@@ -25,7 +25,13 @@ public class ConsecutiveSum {
 					count = count+1;
 					break;
 				}
+				if(total>sum){
+				   break;
+				}
 			}
+			if(total>sum){
+				   break;
+				}
 		}
 		
 		return count;
