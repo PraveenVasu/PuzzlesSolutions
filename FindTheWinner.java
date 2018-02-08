@@ -1,5 +1,5 @@
 
-public class FindWinner {
+public class FindTheWinner {
 
 	/**
 	 * @param args
