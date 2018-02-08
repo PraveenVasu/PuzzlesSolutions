@@ -35,8 +35,11 @@ public class FindTheWinner {
 		if(a>m){
 			return "Andrea";
 		}
-		else{
+		else if(a<m) {
 			return "Maria";
+		}
+		else{
+			return "Tie";
 		}
 	}
 
