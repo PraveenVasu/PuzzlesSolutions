@@ -14,9 +14,10 @@ public class ConsecutiveSum {
 	
 	static int consecutive(long sum){
 		int count = 0;
-		for(int i =1;i<sum;i++){
+		long totalSum = (sum/2)+1;
+		for(int i =1;i<totalSum;i++){
 			int total = i;
-			for(int j=i+1;j<sum;j++){
+			for(int j=i+1;j<totalSum;j++){
 				
 				total = total+j;
 		
